@@ -11,16 +11,21 @@ export default createGlobalStyle`
 body {
   background: #72bca5;
   -webkit-font-smoothing: antialiased;
+
 }
 
 body, input , button {
 
   font: 14px Poppins,sans-serif;
+  
 }
 
 
-#root {
+ul {
   margin: 0 auto;
+  padding: 0 20px 50px;
+  max-width: 1020px;
+ 
  
 }
 
