@@ -2,10 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Bar, Cart, Container } from './style'
 import { MdShoppingBasket } from 'react-icons/md'
+import { useSelector } from 'react-redux'
 
 // import { Container } from './styles';
 
 function Header() {
+  const cart = useSelector(store => store.cart)
+  console.log(cart)
+  const Amount = cart.products.length
+
   return (
     <Container>
       <Link to="/">
@@ -14,7 +19,7 @@ function Header() {
       <Cart to="/cart">
         <div>
           <strong>Meu carrinho</strong>
-          <span>3 itens</span>
+          <span>{Amount} itens</span>
         </div>
         <MdShoppingBasket size={36} color="#304d63" />
       </Cart>
