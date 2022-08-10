@@ -8,7 +8,13 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const before = state.products
-      state.products = [...before, action.payload]
+      state.products = [
+        ...before,
+        {
+          ...action.payload,
+          amount: 1
+        }
+      ]
     }
   }
 })

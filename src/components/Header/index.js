@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux'
 
 function Header() {
   const cart = useSelector(store => store.cart)
-  console.log(cart)
   const Amount = cart.products.length
 
   return (
