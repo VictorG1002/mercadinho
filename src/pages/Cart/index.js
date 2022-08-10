@@ -14,11 +14,9 @@ function Cart() {
       <ProductTable>
         <thead>
           <tr>
-            <th />
             <th>Produto</th>
             <th>Quantidade</th>
             <th>SubTotal</th>
-            <th />
           </tr>
         </thead>
         <tbody>
