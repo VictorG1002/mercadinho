@@ -12,21 +12,20 @@ import { updateAmount } from '../../store/modules/cart/reducer'
 // import { Container } from './styles';
 
 function Cart() {
-  const priceFormatter = price => {
-    price = new Intl.NumberFormat('pt-BR', {
+  const priceFormatter = price =>
+    price.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL'
     })
-  }
 
   const cart = useSelector(store => store.cart)
   const products = cart.products.map(product => ({
     ...product,
-    subtotal: product.price * product.amount
+    subtotal: priceFormatter(product.price * product.amount)
   }))
 
   const total = cart.products.reduce((total, product) => {
-    return total + product.price * product.amount
+    return priceFormatter(total + product.price * product.amount)
   }, 0)
 
   const handleRemoveProduct = product => {
@@ -78,7 +77,7 @@ function Cart() {
                 </div>
               </td>
               <td>
-                <strong>{`R$ ${product.subtotal}`}</strong>
+                <strong>{product.subtotal}</strong>
               </td>
               <td>
                 <button
@@ -97,7 +96,7 @@ function Cart() {
         <button type="button">Finalizar Pediddo</button>
         <Total>
           <span>Total</span>
-          <strong>{`R$ ${total}`}</strong>
+          <strong>{total}</strong>
         </Total>
       </footer>
     </Container>
