@@ -31,7 +31,7 @@ function Home() {
 
           <button type="button" onClick={() => handleAddProduct(product)}>
             <div>
-              <MdAddShoppingCart size={16} color="#fff" /> 3
+              <MdAddShoppingCart size={16} color="#fff" />
             </div>
             <span>Adicionar ao carrinho</span>
           </button>
