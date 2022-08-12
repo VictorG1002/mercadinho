@@ -11,7 +11,7 @@ export const Container = styled.header`
 
   a {
     text-decoration: none;
-    color: #304d63;
+    color: #4b9a90;
   }
 `
 
@@ -31,7 +31,7 @@ export const Cart = styled(Link)`
 
     strong {
       display: block;
-      color: #304d63;
+      color: #4b9a90;
     }
 
     span {

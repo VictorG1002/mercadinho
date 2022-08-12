@@ -9,7 +9,7 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  background: #b2e7e8;
+  background: #55E6C1;
   -webkit-font-smoothing: antialiased;
 
 }

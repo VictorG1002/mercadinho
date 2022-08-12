@@ -32,7 +32,7 @@ export const ProductList = styled.ul`
       margin: 5px 0 20px;
     }
     button {
-      background: #304d63;
+      background: #1f9961;
       color: #fff;
       border: 0;
       border-radius: 10px;
