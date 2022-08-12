@@ -35,9 +35,10 @@ export const ProductList = styled.ul`
       background: #1f9961;
       color: #fff;
       border: 0;
-      border-radius: 10px;
+      border-radius: 18px;
       overflow: hidden;
       margin-top: auto;
+      padding: 10px;
 
       display: flex;
       align-items: center;
@@ -47,16 +48,6 @@ export const ProductList = styled.ul`
         background: rgba(0, 0, 0, 0.4);
       }
 
-      div {
-        display: flex;
-        align-items: center;
-        padding: 12px;
-        background: rgba(0, 0, 0, 0.2);
-
-        svg {
-          margin-right: 5px;
-        }
-      }
       span {
         flex: 1;
         text-align: center;

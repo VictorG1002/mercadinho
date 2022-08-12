@@ -16,7 +16,7 @@ export const Container = styled.div`
       background: #1f9961;
       color: #fff;
       border: 0;
-      border-radius: 4px;
+      border-radius: 14px;
       padding: 12px 20px;
       font-weight: bold;
       text-transform: uppercase;
