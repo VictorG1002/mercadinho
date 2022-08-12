@@ -25,7 +25,7 @@ function Cart() {
   }))
 
   const total = cart.products.reduce((total, product) => {
-    return priceFormatter(total + product.price * product.amount)
+    return total + product.price * product.amount
   }, 0)
 
   const handleRemoveProduct = product => {
@@ -96,7 +96,7 @@ function Cart() {
         <button type="button">Finalizar Pediddo</button>
         <Total>
           <span>Total</span>
-          <strong>{total}</strong>
+          <strong>{priceFormatter(total)}</strong>
         </Total>
       </footer>
     </Container>
