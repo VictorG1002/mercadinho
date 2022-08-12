@@ -4,14 +4,21 @@ import { MdAddShoppingCart, MdApi } from 'react-icons/md'
 import api from '../../services/api'
 import { addToCart } from '../../store/modules/cart/reducer'
 import { store } from '../../store'
+import { useSelector } from 'react-redux'
 
 function Home() {
+  const cart = useSelector(state => state.cart)
   const [products, setProducts] = useState([])
 
   const getResponse = async () => {
     const response = await api.get('products')
     setProducts(response.data)
   }
+  const priceFormatter = price =>
+    price.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    })
 
   const handleAddProduct = product => {
     store.dispatch(addToCart(product))
@@ -27,12 +34,10 @@ function Home() {
         <li key={product.id}>
           <img src={product.image} />
           <strong>{product.title}</strong>
-          <span>{`R$ ${product.price}`}</span>
+          <span>{priceFormatter(product.price)}</span>
 
           <button type="button" onClick={() => handleAddProduct(product)}>
-            <div>
-              <MdAddShoppingCart size={16} color="#fff" />
-            </div>
+            <div></div>
             <span>Adicionar ao carrinho</span>
           </button>
         </li>
