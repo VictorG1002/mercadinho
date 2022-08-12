@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Bar, Cart, Container } from './style'
-import { MdShoppingBasket } from 'react-icons/md'
+import { MdOutlineShoppingCart, MdShoppingBasket } from 'react-icons/md'
 import { useSelector } from 'react-redux'
 
 // import { Container } from './styles';
@@ -20,7 +20,7 @@ function Header() {
           <strong>Meu carrinho</strong>
           <span>{Amount} itens</span>
         </div>
-        <MdShoppingBasket size={36} color="#304d63" />
+        <MdOutlineShoppingCart size={36} color="#4b9a90" />
       </Cart>
     </Container>
   )
